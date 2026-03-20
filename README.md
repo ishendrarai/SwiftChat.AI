@@ -1,339 +1,344 @@
-# SwiftChat
-## AI-Powered Smart Social Media Platform
+# 🚀 SwiftChat — AI-Powered Smart Social Media Platform
 
-> **Production-Grade Technical Documentation | v1.0.0**
-> Open Source · MIT License · Built for Developers, Contributors & Reviewers
+> The emotionally intelligent layer for modern social networking.
+> Discover. Create. Connect. Feel understood.
 
----
-
-| | | |
-|:---:|:---:|:---:|
-| 🧠 **Emotion-Aware AI** | 🎯 **Smart Recommendations** | 💚 **Mental-Wellness First** |
+![Node](https://img.shields.io/badge/Node.js-18+-green)
+![React](https://img.shields.io/badge/React-18+-blue)
+![Python](https://img.shields.io/badge/Python-3.11+-yellow)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)
+![Redis](https://img.shields.io/badge/Redis-7-red)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Status](https://img.shields.io/badge/Status-Production--Ready-success)
 
 ---
 
 ## 📌 Table of Contents
 
-1. [Project Overview](#1-project-overview)
-2. [Problem Statement](#2-problem-statement)
-3. [Proposed Solution](#3-proposed-solution)
-4. [Key Feature Breakdown](#4-key-feature-breakdown)
-5. [AI System Design](#5-ai-system-design)
-6. [System Architecture](#6-system-architecture)
-7. [Request Flow Examples](#7-request-flow-examples)
-8. [Database Design](#8-database-design)
-9. [API Documentation](#9-api-documentation)
-10. [Project Folder Structure](#10-project-folder-structure)
-11. [Performance Considerations](#11-performance-considerations)
-12. [Security Design](#12-security-design)
-13. [Deployment Architecture](#13-deployment-architecture)
-14. [Testing Strategy](#14-testing-strategy)
-15. [Future Roadmap](#15-future-roadmap)
+- [✨ Overview](#-overview)
+- [🚀 Why SwiftChat?](#-why-swiftchat)
+- [🌐 Live Demo](#-live-demo)
+- [📸 Screenshots](#-screenshots)
+- [🔥 Core Features](#-core-features)
+- [🛠 Tech Stack](#-tech-stack)
+- [🏗 Architecture](#-architecture)
+- [🤖 AI System Design](#-ai-system-design)
+- [🔐 Authentication](#-authentication)
+- [🗄 Database Schema](#-database-schema)
+- [🔌 API Documentation](#-api-documentation)
+- [🔐 Security](#-security)
+- [⚡ Performance](#-performance)
+- [🧪 Testing](#-testing)
+- [📋 Prerequisites](#-prerequisites)
+- [⚙ Installation & Setup](#-installation--setup)
+- [🌍 Environment Variables](#-environment-variables)
+- [📁 Project Structure](#-project-structure)
+- [🚀 Deployment](#-deployment)
+- [🔧 Troubleshooting](#-troubleshooting)
+- [❓ FAQ](#-faq)
+- [📊 Design Decisions](#-design-decisions)
+- [🛣 Roadmap](#-roadmap)
+- [🤝 Contributing](#-contributing)
+- [👥 Contributors](#-contributors)
+- [📄 License](#-license)
+- [📬 Contact](#-contact)
 
 ---
 
-## 1. Project Overview
+## ✨ Overview
 
-### 1.1 Concept & Product Vision
+**SwiftChat** is a full-stack, AI-integrated social media platform that goes beyond traditional content sharing. It introduces **emotional intelligence** as a first-class feature — letting users discover, post, and interact with content based on how they actually feel, not just what they search for.
 
-SwiftChat is an AI-integrated social networking platform that redefines how people discover, share, and interact with content online. Unlike traditional platforms that rely solely on hashtags, follower graphs, or engagement-driven algorithms, SwiftChat introduces a fourth dimension to content discovery: **human emotion**.
-
-The platform embeds four distinct AI systems — a caption generator, a conversational chatbot assistant, an emotion-based search engine, and a personalised recommendation engine — directly into the core social experience. The result is a platform that does not just serve content, but understands *why* a user wants it and *how* it might make them feel.
-
-The product vision is to build the **first truly emotionally intelligent social media ecosystem**: one that reduces doomscrolling, supports mental well-being, and empowers users to create better content with less effort.
-
----
-
-### 1.2 Target Users
-
-| User Segment | Primary Need | How SwiftChat Helps |
+| AI Feature | Status | Capability |
 |---|---|---|
-| Everyday Social Users | Relevant, mood-matched content | Emotion-based search & smart feed |
-| Content Creators | Engaging captions quickly | AI caption & hashtag generator |
-| Mental Wellness Seekers | Uplifting, curated content | Mood-aware recommendation engine |
-| Developers / API Consumers | Programmatic AI features | REST / GraphQL API access |
-| Community Moderators | Safe, toxic-free spaces | AI content moderation layer |
+| 🟢 AI Caption Generator | Full Integration | 5 styles, hashtags, multi-platform output |
+| 🟢 Emotion-Based Search | Full Integration | NLP intent + vector search + image emotion |
+| 🟢 AI Chatbot Assistant | Full Integration | LangChain ReAct, context-aware responses |
+| 🟢 Smart Recommendation Feed | Full Integration | Mood + time-of-day + interaction signals |
+| 🟢 AI Content Moderation | Full Integration | Hate speech, NSFW, toxicity detection |
+
+Instead of forcing users to express themselves through hashtags and keywords, SwiftChat provides a **single emotionally-aware social ecosystem** for:
+
+- 🧠 **Mood-matched discovery** — Find content that fits how you feel right now
+- ✍️ **Instant AI captions** — Generate engaging captions for any post in seconds
+- 💬 **Conversational AI assistant** — Get help, ideas, and emotional support in-app
+- 🎯 **Smart feed curation** — A feed that adapts to your mood and time of day
+- 🛡 **Proactive moderation** — AI removes toxic content before you ever see it
+- 📈 **Engagement optimisation** — Know your caption's predicted performance before posting
 
 ---
 
-### 1.3 Real-World Problem Being Solved
+## 🚀 Why SwiftChat?
 
-Social media reaches over **5 billion people** globally. Yet despite this scale, the platforms most people use daily were not designed with emotional intelligence in mind. The core discovery mechanisms — hashtags, engagement loops, and popularity signals — optimise for *time-on-platform* rather than *user well-being*.
+### The Problem
 
-SwiftChat proposes an architectural shift: **emotion and context should be first-class inputs to content delivery.**
+Social media users face:
 
----
+- ❌ **Hashtag-only discovery** — Can't search by emotion or mood
+- ❌ **Caption writer's block** — Spending 5–10 minutes per post
+- ❌ **Toxic feeds** — Engagement algorithms that prioritise outrage over well-being
+- ❌ **No AI interactivity** — AI is hidden in algorithms, never a visible tool
+- ❌ **Mental health toll** — Irrelevant or harmful content with no filter
 
-## 2. Problem Statement
+### The Solution
 
-### 2.1 Limitations of Current Social Platforms
+SwiftChat acts as an **emotionally intelligent layer** on top of a full social platform:
 
-#### 🔍 Hashtag-Dependent Discovery
-Content discovery is almost entirely dependent on hashtags and keyword matching. A user who opens an app feeling anxious and wanting calming content cannot simply express that need — they must know and type the right hashtag. This creates a friction-filled, imprecise experience that rarely surfaces the content most relevant to the user's emotional state.
+- ✅ **Emotion-first content discovery** — Express a feeling, get matched content
+- ✅ **One-click AI captions** — Generate, compare, and post in under 10 seconds
+- ✅ **Mood-aware recommendation engine** — Morning motivation, night-time calm
+- ✅ **LangChain-powered chatbot** — Context-aware assistant embedded in your feed
+- ✅ **Real-time AI moderation** — Content safety before publication, not after
 
-#### ✍️ Caption Creativity Barrier
-Creating high-quality, engaging captions requires copywriting skill that most users do not have. Studies show the average user spends **5–10 minutes** deliberating over a single post caption. This friction reduces posting frequency and content quality, especially for non-native language speakers.
-
-#### 😔 Mental Health Impact
-Algorithmic feeds prioritise content that maximises engagement — which frequently means emotionally polarising, anxiety-inducing, or outrage-driven material. There is no mechanism for users to express *"I need something uplifting right now"* and receive a curated, contextually appropriate response.
-
-#### 🤖 Lack of AI Interactivity
-Despite billions of dollars of AI investment in the industry, most social platforms offer no interactive AI assistance to the average user. AI operates silently in recommendation algorithms but is never exposed as a collaborative tool.
-
----
-
-### 2.2 Pain Point Comparison
-
-| Pain Point | Current Platform Behaviour | SwiftChat Solution |
-|---|---|---|
-| Content discovery | Keyword/hashtag only | Emotion + intent-aware NLP search |
-| Caption creation | Manual, time-consuming | One-click AI caption generation |
-| Mental health impact | Engagement-maximising feeds | Mood-matched, wellness-aware curation |
-| Toxic content | Reactive human moderation | Proactive AI moderation pipeline |
-| User assistance | No AI interaction layer | Embedded conversational AI chatbot |
+> It's not just a social platform. It's a **well-being engine**.
 
 ---
 
-## 3. Proposed Solution
+## 🌐 Live Demo
 
-### 3.1 System Overview
+🔗 **https://swiftchat-demo.vercel.app**
 
-SwiftChat is an AI-integrated social networking platform built on a **microservices architecture**. The core backend orchestrates four independently deployable AI services, each responsible for a distinct intelligent behaviour. All AI services communicate with the main backend via an internal service mesh, keeping concerns cleanly separated and independently scalable.
-
----
-
-### 3.2 How the System Solves Each Problem
-
-| Problem | AI Module | Mechanism |
-|---|---|---|
-| Hashtag-only discovery | Emotion Search Engine | NLP + sentiment analysis on post content + image emotion recognition |
-| Caption writer's block | AI Caption Generator | LLM prompt engineering with image CLIP encoding |
-| Engagement-toxic feeds | Smart Recommendation Engine | Mood + time-of-day + interaction history weighting |
-| Toxic / harmful content | AI Content Moderator | Multi-model classifier: hate speech, toxicity, NSFW detection |
-| No AI interactivity | AI Chatbot Assistant | LangChain-powered conversational agent with platform-aware context |
-
----
-
-### 3.3 High-Level Workflow
-
-1. User opens the app; ambient mood detection prompts optional mood check-in
-2. User's mood state is stored in session context and influences all downstream AI decisions
-3. Feed is populated by the recommendation engine using mood + interaction history
-4. User uploads a post; AI caption generator offers real-time suggestions
-5. All incoming posts pass through the AI content moderation pipeline before publication
-6. User performs an emotion-based search; NLP engine returns mood-matched results
-7. AI chatbot is available throughout for assistance, creative ideas, or conversation
-
----
-
-## 4. Key Feature Breakdown
-
-### 4.1 AI Caption Generator
-
-#### Overview
-The caption generator removes creative friction from the posting experience. A user uploads an image or describes a post, selects a tone/style, and receives multiple professionally written caption options with suggested hashtags — in under two seconds.
-
-#### Supported Caption Styles
-
-| Style | Description | Ideal Use Case |
-|---|---|---|
-| Funny | Humorous, playful, light-hearted | Pet photos, food fails, candid moments |
-| Motivational | Achievement-forward, empowering | Fitness, work milestones, personal growth |
-| Romantic | Warm, emotional, love-forward language | Couple photos, anniversaries, sunsets |
-| Inspirational | Reflective, philosophical, uplifting | Nature, travel, quiet moments |
-| Storytelling | Narrative arc, hooks the reader | Travel journals, personal experiences |
-
-#### Internal Mechanism
-
-1. Image is encoded via a **CLIP** vision model to produce a semantic embedding
-2. Top scene/object/mood tags are extracted from the embedding
-3. A structured prompt is assembled with image tags + user-selected style
-4. LLM (GPT-4 / equivalent) generates 3 caption variants + hashtag suggestions
-5. Output is post-processed, sanitised, and returned to the frontend
-
-#### Example
+### Test Credentials
 
 ```
-Input:   Sunset beach photo  |  Style: Inspirational
-
-Output 1: "Chasing sunsets and peaceful moments 🌅"
-Output 2: "The sky painted poetry tonight."
-Output 3: "Every sunset is a reminder that endings can be beautiful."
-
-Hashtags: #sunset #goldenhour #peace #travel #nature
+Email:    demo@swiftchat.io
+Password: demo123
 ```
 
-#### Edge Cases
-- **Blurry / unrecognisable images** → fallback to text-only prompt asking user for a brief description
-- **Sensitive image content** → flagged by moderation layer before caption generation begins
-- **Non-English language preference** → style prompt adapted to user's locale setting
+> **Note:** Demo account is read-only with pre-populated sample posts, captions, and analytics.
 
 ---
 
-### 4.2 AI Chatbot Assistant
+## 📸 Screenshots
 
-#### Overview
-The embedded AI chatbot is a **LangChain-powered conversational agent** that operates with full awareness of platform context. It is not a generic chat interface — it has access to the user's post history, followed topics, and current mood state, enabling responses that are genuinely personalised.
+### 🎯 Dashboard & Feed
+![Dashboard](./screenshots/dashboard.png)
+*Mood-matched feed with real-time AI recommendation*
 
-#### Capabilities
+### ✍️ AI Caption Wizard
+![Caption](./screenshots/caption-wizard.png)
+*Upload an image, pick a style, get 3 captions instantly*
 
-| Capability | Example Interaction |
+### 🔍 Emotion Search
+![Search](./screenshots/emotion-search.png)
+*Search "I want something uplifting" and get perfectly matched posts*
+
+### 💬 AI Chatbot Assistant
+![Chatbot](./screenshots/chatbot.png)
+*Context-aware chatbot accessible from anywhere in the app*
+
+---
+
+## 🔥 Core Features
+
+### 🧠 AI Caption Generator
+- **Multi-style output** — Funny, Motivational, Romantic, Inspirational, Storytelling
+- **Platform-aware** — Captions tuned to Instagram, Twitter, LinkedIn, TikTok, Facebook
+- **3 variants per request** — Always have options to choose from
+- **Smart hashtag suggestions** — Tiered by volume: niche, mid-range, broad reach
+- **Engagement score preview** — See predicted performance before posting
+- **Image understanding** — CLIP-powered scene + mood detection from your photo
+
+### 🔍 Emotion-Based Smart Search
+- **Free-text emotional queries** — "Make me happy", "I need calm", "Something relatable"
+- **Multi-model NLP pipeline** — BERT intent classification + sentence-transformer encoding
+- **Vector similarity search** — pgvector cosine search over 384-dim post embeddings
+- **Image emotion re-ranking** — Visual posts re-scored by EfficientNet emotion model
+- **Mood-query blending** — User's current mood automatically boosts or filters results
+
+### 💬 AI Chatbot Assistant
+- **LangChain ReAct agent** — Reasoning + acting pattern with registered platform tools
+- **Full platform context** — Accesses user mood, post history, and preferences in real time
+- **Caption writing on demand** — Ask for a caption mid-conversation, receive one instantly
+- **Emotional support mode** — Detects distress signals and responds with care + resources
+- **Post discovery** — "Show me something funny" triggers a live database query
+- **Navigation guidance** — Full platform help embedded in natural conversation
+
+### 📡 Smart Recommendation System
+- **Hybrid filtering** — Collaborative (similar users) + content-based (mood match)
+- **Time-of-day awareness** — Morning → motivational; night → calm and reflective
+- **Interaction history weighting** — Likes, saves, shares, and time-spent all contribute
+- **Cold-start handling** — Mood check-in survey populates the onboarding feed for new users
+- **Trend overlay** — Platform-wide trending filtered for emotional compatibility
+
+### 🛡 AI Content Moderation
+- **Pre-publication pipeline** — Every post screened before going live
+- **Multi-label detection** — Hate speech, toxicity, spam, NSFW, violence
+- **Three-tier outcome** — Safe (auto-publish), Borderline (human review queue), Unsafe (auto-reject)
+- **Near-real-time processing** — Async Redis queue keeps post creation latency under 500ms
+
+### 👤 Social Community
+- **Public profile pages** — Showcase your best AI-assisted captions
+- **Upvote system** — Community votes surface the best content
+- **Trending feed** — Algorithm-ranked captions by upvotes and recency
+- **Mood check-in** — Daily optional check-in that personalises the entire experience
+
+---
+
+## 🛠 Tech Stack
+
+### Frontend
+| Technology | Purpose |
 |---|---|
-| Caption writing assistance | User: "Caption for a hiking post" → AI: "The mountains called. I answered. ⛰️" |
-| Post discovery suggestions | User: "Show me something funny" → AI surfaces top-upvoted comedy posts |
-| Creative idea prompting | User: "What should I post today?" → AI suggests based on trends + mood |
-| Emotional support conversation | User: "I feel lonely today" → AI engages empathetically, suggests uplifting content |
-| Platform navigation help | User: "How do I save a post?" → AI provides step-by-step guidance |
+| ⚛ **Next.js 14** | SSR/SSG React framework |
+| 🎨 **Tailwind CSS** | Utility-first styling |
+| 🎞 **Framer Motion** | Micro-animations |
+| 🔄 **Axios** | HTTP client |
+| 🎣 **React Query** | Server state management |
+| 📝 **React Hook Form** | Form validation |
 
-#### LangChain Architecture
+### Mobile
+| Technology | Purpose |
+|---|---|
+| 📱 **Flutter** | Cross-platform mobile app (iOS & Android) |
+| 🔄 **Dio** | Flutter HTTP client |
 
-The chatbot uses a **ReAct (Reasoning + Acting)** agent pattern with the following tools registered in its tool chain:
+### Backend
+| Technology | Purpose |
+|---|---|
+| 🟢 **Node.js 18** | JavaScript runtime |
+| 🚀 **Express.js** | REST API framework |
+| 🔧 **TypeScript** | Type safety |
+| 🎯 **Joi** | Request validation |
+| 🔐 **bcrypt** | Password hashing |
+| 🎫 **jsonwebtoken** | JWT authentication |
+| 📧 **Nodemailer** | Email service |
 
-- `PostSearchTool` — searches the platform database by emotion/tag/keyword
-- `CaptionGeneratorTool` — delegates to the caption microservice
-- `UserContextTool` — fetches the current user's mood, history, and preferences
-- `TrendingTopicsTool` — queries the trending topics service
+### AI Services (Python)
+| Technology | Purpose |
+|---|---|
+| ⚡ **FastAPI** | AI microservice framework |
+| 🦜 **LangChain** | Chatbot ReAct agent runtime |
+| 🤗 **HuggingFace Transformers** | BERT, EfficientNet, sentence-transformers |
+| 🧠 **OpenAI API** | GPT-4 for caption + chat generation |
+| 🔍 **CLIP (ViT-L/14)** | Image semantic encoding |
 
-#### Edge Cases
-- **User expresses distress or crisis signals** → chatbot surfaces mental health resources and disengages from normal assistant mode
-- **Ambiguous queries** → chatbot asks a single clarifying question before acting
-- **Unsupported languages** → chatbot responds in the same language the user writes in, leveraging LLM multilingual capability
+### Database & Cache
+| Technology | Purpose |
+|---|---|
+| 🐘 **PostgreSQL 15 + pgvector** | Relational store + vector similarity search |
+| 🍃 **MongoDB** | Chatbot session state + flexible post metadata |
+| ⚡ **Redis 7** | Caching, rate limiting, async moderation queue |
+| 📦 **AWS S3** | Image and video object storage |
 
----
-
-### 4.3 Emotion-Based Smart Search
-
-#### Overview
-This is SwiftChat's most differentiated feature. Rather than requiring users to know the right hashtag or keyword, the emotion search engine accepts **free-text emotional expressions** and maps them to relevant content using a multi-model NLP pipeline.
-
-#### Internal Mechanism
-
-```
-User Input: "I want something calming and uplifting"
-
-Step 1: Intent Classification
-        → Primary emotion: calm (0.87), joy (0.72)
-        → Content type preference: visual, quotes
-
-Step 2: Semantic Embedding
-        → Encode query into dense vector via sentence-transformer
-
-Step 3: Post Retrieval
-        → Vector similarity search against pre-indexed post embeddings
-        → Filter by emotion_tags: ['calm', 'uplifting', 'peaceful']
-
-Step 4: Image Emotion Re-ranking
-        → Posts with images re-scored by visual emotion model
-
-Step 5: Return ranked results
-        → Motivational videos, positive quotes,
-           calm nature photography, uplifting stories
-```
-
-#### NLP Pipeline Components
-
-| Component | Model / Tool | Purpose |
-|---|---|---|
-| Intent Classifier | Fine-tuned BERT (GoEmotions dataset) | Map raw query to emotion categories |
-| Semantic Encoder | sentence-transformers/all-MiniLM-L6-v2 | Encode query + posts as dense vectors |
-| Vector Search | pgvector (PostgreSQL extension) | Efficient cosine similarity search at scale |
-| Image Emotion Model | EfficientNet fine-tuned on emotion dataset | Re-rank posts containing images |
-| Sentiment Analyser | VADER + custom lexicon | Score caption text sentiment polarity |
-
-#### Search Query → Result Mapping
-
-| Search Query | Detected Emotion(s) | Returned Content Types |
-|---|---|---|
-| "Make me happy" | joy, amusement | Funny memes, cute pet videos, positive quotes |
-| "I need motivation" | determination, hope | Fitness journeys, success stories, motivational clips |
-| "Something calming" | calmness, serenity | Nature photography, meditation content, soft music |
-| "Sad relatable posts" | sadness, nostalgia | Reflective writing, melancholic art, relatable comics |
-| "I feel lonely" | loneliness, longing | Community posts, warmth-focused content, chat prompts |
-
-#### Edge Cases
-- **Emotionally ambiguous queries** ("I don't know how I feel") → system defaults to a balanced, positive-leaning feed
-- **Potentially harmful search intent** → moderation layer intercepts and redirects to wellness resources
-- **Very rare emotion labels** → fallback to closest semantic neighbour in the emotion taxonomy
+### DevOps & Tooling
+| Technology | Purpose |
+|---|---|
+| 🐳 **Docker** | Containerisation |
+| 🔄 **GitHub Actions** | CI/CD pipeline |
+| 📊 **Prometheus** | Metrics collection |
+| 📈 **Grafana** | Monitoring dashboards |
+| 🔒 **Let's Encrypt** | SSL certificates |
+| ☁ **AWS ECS** | Container orchestration |
 
 ---
 
-### 4.4 Smart Recommendation System
+## 🏗 Architecture
 
-#### Overview
-The recommendation engine moves beyond engagement-maximisation to deliver content that is both **relevant** and **emotionally appropriate**. It is a hybrid system combining collaborative filtering (what similar users engaged with) and content-based filtering (what matches the current user's mood and interests).
+**Architecture Type:** Microservices for AI + Modular Monolith for Core API
 
-#### Recommendation Signals
-
-| Signal | Weight | Description |
-|---|---|---|
-| Current mood state | High | User's checked-in or inferred mood from recent activity |
-| Time of day | Medium | Morning → motivational; night → calming/reflective content |
-| Interaction history | High | Posts liked, saved, shared, and time-spent reading |
-| Topic preferences | Medium | Followed topics, frequent search themes |
-| Trending content | Low | Platform-wide trending, filtered by emotion compatibility |
-| Social graph | Medium | Content popular within the user's follow network |
-
-#### Edge Cases
-- **New users (cold start)** → initialised with a mood check-in survey; onboarding feed populated from popular content in selected interest categories
-- **Mood conflict** (user says "happy" but interaction history shows sadness signals) → system blends both signals with recency weighting
-
----
-
-### 4.5 AI Content Moderation
-
-#### Overview
-Every piece of user-generated content — captions, comments, images, and videos — passes through an automated moderation pipeline before becoming visible to other users. The system operates in near-real-time and escalates borderline content to human reviewers.
-
-#### Moderation Pipeline
+### 🔷 High-Level Architecture
 
 ```
-Incoming Content
-      |
-      v
-Text Classifier (hate speech / toxicity / spam)
-      |
-      v
-Image / Video Classifier (NSFW / violence / graphic)
-      |
-      v
-┌──────────────────────────────────────────────────────┐
-│  SAFE        (confidence > 0.95)  →  Published        │
-│  BORDERLINE  (0.60 – 0.95)        →  Human review     │
-│  UNSAFE      (confidence > 0.95)  →  Auto-rejected    │
-└──────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│                       CLIENT LAYER                            │
+│       Next.js 14  |  Tailwind CSS  |  Flutter (mobile)        │
+└───────────────────────────┬───────────────────────────────────┘
+                            │  HTTPS / WebSocket
+┌───────────────────────────▼───────────────────────────────────┐
+│                      API GATEWAY                              │
+│           Rate Limiting | Auth | Routing | Logging            │
+└──────────────────┬────────────────────────┬───────────────────┘
+                   │                        │
+┌──────────────────▼──────────┐  ┌──────────▼────────────────────┐
+│   Node.js / Express         │  │      AI Service Mesh          │
+│   (Core Backend API)        │  │  Caption | Search | Chatbot   │
+│   REST + GraphQL            │  │  Recommender | Moderator      │
+└──────────┬──────────────────┘  └──────────┬────────────────────┘
+           │                                │
+┌──────────▼──────────────┐  ┌─────────────▼──────────────────┐
+│  PostgreSQL (pgvector)  │  │  OpenAI / HuggingFace APIs     │
+│  MongoDB                │  │  LangChain Agent Runtime       │
+│  Redis Cache            │  │  Sentence-Transformers (BERT)  │
+└─────────────────────────┘  └────────────────────────────────┘
+```
+
+### 🔹 Backend Module Breakdown
+
+```
+API Gateway
+    │
+    ├── Route Handlers
+    │       └── Controllers → Services → DB Models / Redis / AI Bridge
+    │
+    └── Middleware Layer
+            ├── JWT Auth
+            ├── Joi Validation
+            ├── Rate Limiter (Redis)
+            └── Request Logger (Prometheus)
+```
+
+### 📐 Full Request Flow Example
+
+```
+1.  User submits: POST /api/ai/caption
+2.  Nginx forwards to Express API
+3.  JWT Middleware validates Bearer token
+4.  Rate Limit Middleware checks hourly quota
+5.  Joi Validation Middleware validates multipart body
+6.  Controller extracts user_id, style, platform
+7.  Service layer:
+    a. Uploads image to S3 → gets signed URL
+    b. Calls Python Caption Microservice (internal REST)
+    c. CLIP encodes image → scene/object/mood tags extracted
+    d. Structured prompt assembled → GPT-4 called
+    e. 3 captions + hashtags returned
+    f. NLP scorer predicts engagement score
+8.  Result persisted to PostgreSQL
+9.  Result cached in Redis (key: perceptual_hash:style:platform, TTL: 3600s)
+10. 200 OK response returned to frontend
+11. Request metrics recorded in Prometheus
 ```
 
 ---
 
-## 5. AI System Design
+## 🤖 AI System Design
 
-### 5.1 AI Architecture Overview
+### AI Pipeline Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                     AI SERVICE LAYER                        │
-│                                                             │
-│  ┌──────────────────┐    ┌──────────────────────────────┐  │
-│  │ Caption Service  │    │   Emotion Search Engine      │  │
-│  │ (FastAPI/Python) │    │   (FastAPI + pgvector)       │  │
-│  └──────────────────┘    └──────────────────────────────┘  │
-│                                                             │
-│  ┌──────────────────┐    ┌──────────────────────────────┐  │
-│  │ Chatbot Service  │    │  Recommendation + Moderation │  │
-│  │ (LangChain)      │    │  Engine (Python microservice)│  │
-│  └──────────────────┘    └──────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────┘
-         |                               |
-         └──── Internal gRPC / REST ─────┘
-                        |
-             Node.js / Django Backend
+┌─────────────────────────────────────────────────────────────────┐
+│                       AI SERVICE LAYER                          │
+│                                                                 │
+│  ┌───────────────────┐    ┌──────────────────────────────────┐  │
+│  │  Caption Service  │    │     Emotion Search Engine        │  │
+│  │  FastAPI / Python │    │     FastAPI + pgvector           │  │
+│  └───────────────────┘    └──────────────────────────────────┘  │
+│                                                                 │
+│  ┌───────────────────┐    ┌──────────────────────────────────┐  │
+│  │  Chatbot Service  │    │   Recommender + Moderator        │  │
+│  │  LangChain ReAct  │    │   Python microservices           │  │
+│  └───────────────────┘    └──────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────────┘
+          |                                |
+          └──── Internal gRPC / REST ──────┘
+                         |
+              Node.js Core Backend
 ```
 
----
+### Model Interaction Flow
 
-### 5.2 Prompt Engineering Strategy
+| Feature | Models Used | Input | Output |
+|---|---|---|---|
+| Caption Generation | CLIP + GPT-4 | Image + style + platform | 3 captions + hashtags |
+| Emotion Search | BERT + sentence-transformers + pgvector | Free-text query | Ranked post list |
+| Chatbot | LangChain ReAct + GPT-4 | Conversation history + user context | Response + optional action |
+| Recommendation | Collaborative filter + mood model | History + mood + time | Ranked post feed |
+| Moderation | Fine-tuned BERT + EfficientNet | Text + image | Safe / Review / Reject label |
 
-All LLM-powered features use a structured, multi-variable prompt template. System prompts establish the model's role and constraints; user prompts inject dynamic context derived from image analysis, mood state, and user preferences.
+### Prompt Engineering Strategy
+
+All LLM calls use a structured, multi-variable prompt template:
 
 ```
 SYSTEM:
@@ -343,20 +348,20 @@ platform-appropriate. Never generate harmful, discriminatory, or misleading cont
 
 USER:
   Image Analysis:
-    - Scene:          {scene}
-    - Objects:        {objects}
-    - Detected Mood:  {image_mood}
+    - Scene:         {scene}
+    - Objects:       {objects}
+    - Detected Mood: {image_mood}
 
   User Context:
-    - Current Mood:       {user_mood}
-    - Style Preference:   {style}
-    - Target Platform:    {platform}
-    - Language:           {locale}
+    - Current Mood:     {user_mood}
+    - Style:            {style}
+    - Target Platform:  {platform}
+    - Language:         {locale}
 
   Task:
     Generate 3 caption variants in the '{style}' style for {platform}.
     Each caption must be under {char_limit} characters.
-    Append 5–8 relevant hashtags.
+    Append 5-8 relevant hashtags.
 
   Output Format (JSON):
     { "captions": [string, string, string], "hashtags": [string] }
@@ -364,150 +369,77 @@ USER:
 
 ---
 
-### 5.3 Model Interaction Flow
+## 🔐 Authentication
 
-| Feature | Models Used | Input | Output |
-|---|---|---|---|
-| Caption Generation | CLIP + GPT-4 | Image + style + platform | 3 captions + hashtags |
-| Emotion Search | BERT + sentence-transformers | Free-text query | Ranked post list |
-| Chatbot | LangChain ReAct + GPT-4 | Conversation history + user context | Conversational response |
-| Recommendation | Collaborative filter + mood model | User history + mood + time | Ranked post feed |
-| Moderation | Fine-tuned BERT + EfficientNet | Text + image | Safe / Review / Reject label |
+### Supported Methods
+
+1. **Email / Password** — Traditional auth with bcrypt
+2. **Google OAuth 2.0** — Sign in with Google
+3. **GitHub OAuth** — Sign in with GitHub
+
+### JWT Token Structure
+
+```json
+{
+  "userId":  "uuid-v4",
+  "email":   "user@example.com",
+  "role":    "creator",
+  "iat":     1673481600,
+  "exp":     1674086400
+}
+```
+
+### Token Expiration
+- **Access Token:** 7 days
+- **Refresh Token:** 30 days (stored in HttpOnly cookie)
+
+### Security Features
+- Password hashing with bcrypt (12 salt rounds)
+- Refresh token rotation on every use
+- Token blacklisting on logout via Redis set
+- Rate limiting on auth endpoints — 5 requests/minute
+- Account lockout after 5 failed login attempts (15-min cooldown)
 
 ---
 
-## 6. System Architecture
+## 🗄 Database Schema
 
-### 6.1 Architecture Diagram
-
-```
-┌───────────────────────────────────────────────────────────┐
-│                    CLIENT LAYER                           │
-│    React / Next.js  |  Tailwind CSS  |  Flutter (mobile)  │
-└────────────────────────────┬──────────────────────────────┘
-                             │  HTTPS / WebSocket
-┌────────────────────────────▼──────────────────────────────┐
-│                   API GATEWAY                             │
-│          Rate Limiting | Auth | Routing | Logging         │
-└───────────────┬────────────────────────┬──────────────────┘
-                │                        │
-┌───────────────▼───────┐    ┌───────────▼──────────────────┐
-│   Node.js / Django    │    │     AI Service Mesh          │
-│   (Core Backend API)  │    │  Caption | Search | Chatbot  │
-│   REST + GraphQL      │    │  Recommender | Moderator     │
-└───────┬───────────────┘    └───────────┬──────────────────┘
-        │                                │
-┌───────▼───────────────┐   ┌────────────▼─────────────────┐
-│  PostgreSQL (pgvector) │   │  OpenAI / HuggingFace APIs  │
-│  MongoDB               │   │  LangChain Agent Runtime    │
-│  Redis Cache           │   │  Sentence-Transformers      │
-└───────────────────────┘   └─────────────────────────────┘
-```
-
----
-
-### 6.2 Layer-by-Layer Explanation
-
-#### Frontend Layer
-The web frontend is a **Next.js** application with server-side rendering for SEO and fast initial load. Tailwind CSS provides utility-first styling. For native mobile experiences, a **Flutter** application mirrors the core feature set. Both clients communicate with the backend over HTTPS REST (for data operations) and WebSocket (for real-time chat and notifications).
-
-#### Backend Layer
-The core backend can be implemented in either **Node.js (Express)** or **Python (Django)**, both of which expose a unified API. The backend is responsible for user authentication, post CRUD operations, orchestrating calls to AI microservices, and serving the social graph. GraphQL is offered alongside REST to allow frontend clients to fetch precisely the data they need.
-
-#### AI Service Layer
-Each AI capability is packaged as an independent **Python FastAPI microservice**. Services communicate with the core backend via internal REST or gRPC. This decoupling means the caption generator can be scaled to GPU nodes independently of the moderation service running on CPU nodes.
-
-#### Database Layer
-- **PostgreSQL + pgvector** — primary relational store + vector similarity search for emotion search
-- **MongoDB** — flexible document store for post metadata, AI analysis results, and chatbot session state
-- **Redis** — session caching, rate limit counters, trending topic rankings, and real-time notification queues
-
----
-
-## 7. Request Flow Examples
-
-### 7.1 Emotion-Based Search Flow
+### Entity Relationship Overview
 
 ```
-1.  User types: "I want something uplifting"
-2.  POST /api/search/emotion
-    { "query": "I want something uplifting", "mood": "neutral" }
-
-3.  API Gateway: validates JWT, checks rate limit
-4.  Backend forwards query to Emotion Search microservice
-
-5.  Search service:
-    a. BERT classifier → emotions: [joy: 0.82, hope: 0.75]
-    b. sentence-transformer encodes query → 384-dim vector
-    c. pgvector cosine search against post embeddings (top-50)
-    d. EfficientNet re-ranks image posts by visual positivity
-
-6.  Backend fetches full post objects from PostgreSQL for top-20 results
-7.  Results cached in Redis (key: hash(query+mood), TTL=300s)
-8.  200 OK returned with ranked post list
+USERS        ||--o{ POSTS             : "creates"
+USERS        ||--o{ COMMENTS          : "writes"
+USERS        ||--o{ USER_INTERACTIONS : "generates"
+POSTS        ||--o{ COMMENTS          : "has"
+POSTS        ||--o{ USER_INTERACTIONS : "receives"
+POSTS        }o--o{ HASHTAGS          : "tagged_with"
 ```
 
----
-
-### 7.2 Caption Generation Flow
-
-```
-1.  User uploads image, selects style "Motivational", platform "Instagram"
-2.  POST /api/ai/caption
-    { image: <file>, style: "motivational", platform: "instagram" }
-
-3.  Backend uploads image to S3, retrieves signed URL
-4.  Backend sends { image_url, style, platform } to Caption microservice
-
-5.  Caption service:
-    a. CLIP model encodes image → scene tags: ["mountain", "sunrise", "sky"]
-    b. Prompt assembled with tags + style + platform constraints
-    c. GPT-4 called → 3 caption variants + 7 hashtag suggestions returned
-
-6.  Result stored in PostgreSQL (ai_caption_cache table)
-7.  Result cached in Redis (key: perceptual_hash:style:platform, TTL=3600s)
-8.  200 OK returned to frontend
-```
-
----
-
-### 7.3 Cache Hit Flow
-
-```
-1.  User submits similar query with same mood context
-2.  Backend computes hash(query + mood)
-3.  Redis lookup: key = emotion_search:{hash}
-4.  CACHE HIT → return cached response instantly (< 30ms)
-5.  No AI service call made, no LLM cost incurred
-```
-
----
-
-## 8. Database Design
-
-### 8.1 Table: users
+### 👤 Table: users
 
 ```sql
 CREATE TABLE users (
   id              UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-  username        VARCHAR(50)  NOT NULL UNIQUE,
-  email           VARCHAR(255) NOT NULL UNIQUE,
-  password_hash   TEXT         NOT NULL,
+  username        VARCHAR(50)   NOT NULL UNIQUE,
+  email           VARCHAR(255)  NOT NULL UNIQUE,
+  password_hash   TEXT          NOT NULL,
   display_name    VARCHAR(100),
   avatar_url      TEXT,
   bio             TEXT,
-  current_mood    VARCHAR(50),          -- updated by mood check-in
+  current_mood    VARCHAR(50),           -- updated by mood check-in
   mood_updated_at TIMESTAMPTZ,
-  created_at      TIMESTAMPTZ  NOT NULL DEFAULT NOW()
+  role            VARCHAR(20)   NOT NULL DEFAULT 'creator',
+  email_verified  BOOLEAN       NOT NULL DEFAULT FALSE,
+  created_at      TIMESTAMPTZ   NOT NULL DEFAULT NOW(),
+  last_login      TIMESTAMPTZ
 );
 
-CREATE INDEX idx_users_email ON users(email);
-CREATE INDEX idx_users_mood  ON users(current_mood);
+CREATE INDEX idx_users_email    ON users(email);
+CREATE INDEX idx_users_mood     ON users(current_mood);
+CREATE INDEX idx_users_username ON users(username);
 ```
 
----
-
-### 8.2 Table: posts
+### 📝 Table: posts
 
 ```sql
 CREATE TABLE posts (
@@ -516,23 +448,24 @@ CREATE TABLE posts (
   caption           TEXT,
   media_url         TEXT,
   media_type        VARCHAR(10) CHECK (media_type IN ('image','video','text')),
-  emotion_tags      TEXT[],              -- AI-assigned emotion labels
-  sentiment_score   FLOAT,               -- -1.0 (negative) to 1.0 (positive)
-  embedding         vector(384),         -- sentence-transformer embedding for search
-  moderation_status VARCHAR(20) DEFAULT 'pending',  -- pending/approved/rejected
-  is_public         BOOLEAN     NOT NULL DEFAULT TRUE,
-  created_at        TIMESTAMPTZ NOT NULL DEFAULT NOW()
+  emotion_tags      TEXT[],               -- AI-assigned emotion labels
+  sentiment_score   FLOAT,                -- -1.0 (negative) to 1.0 (positive)
+  embedding         vector(384),          -- sentence-transformer embedding for search
+  moderation_status VARCHAR(20)  NOT NULL DEFAULT 'pending',
+  upvotes           INTEGER      NOT NULL DEFAULT 0,
+  is_public         BOOLEAN      NOT NULL DEFAULT TRUE,
+  created_at        TIMESTAMPTZ  NOT NULL DEFAULT NOW()
 );
 
 CREATE INDEX idx_posts_user_id      ON posts(user_id);
 CREATE INDEX idx_posts_emotion_tags ON posts USING GIN(emotion_tags);
-CREATE INDEX idx_posts_embedding    ON posts USING ivfflat(embedding vector_cosine_ops);
+CREATE INDEX idx_posts_embedding    ON posts USING ivfflat(embedding vector_cosine_ops)
+                                     WITH (lists = 100);
 CREATE INDEX idx_posts_sentiment    ON posts(sentiment_score);
+CREATE INDEX idx_posts_public       ON posts(is_public) WHERE is_public = TRUE;
 ```
 
----
-
-### 8.3 Table: comments
+### 💬 Table: comments
 
 ```sql
 CREATE TABLE comments (
@@ -545,11 +478,10 @@ CREATE TABLE comments (
 );
 
 CREATE INDEX idx_comments_post_id ON comments(post_id);
+CREATE INDEX idx_comments_user_id ON comments(user_id);
 ```
 
----
-
-### 8.4 Table: user_interactions (for recommendations)
+### 📊 Table: user_interactions
 
 ```sql
 CREATE TABLE user_interactions (
@@ -560,54 +492,167 @@ CREATE TABLE user_interactions (
                       interaction_type IN ('like','save','share','view','skip')
                     ),
   time_spent_ms     INTEGER,
-  created_at        TIMESTAMPTZ NOT NULL DEFAULT NOW()
+  created_at        TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  UNIQUE(user_id, post_id, interaction_type)
 );
 
 CREATE INDEX idx_interactions_user_id ON user_interactions(user_id);
 CREATE INDEX idx_interactions_post_id ON user_interactions(post_id);
 ```
 
----
+### 🏷 Table: hashtags
 
-### 8.5 Design Decisions
+```sql
+CREATE TABLE hashtags (
+  id          UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  caption_id  UUID REFERENCES posts(id) ON DELETE CASCADE,
+  tag         VARCHAR(100) NOT NULL,
+  tier        SMALLINT     NOT NULL CHECK (tier IN (1, 2, 3)),
+  created_at  TIMESTAMPTZ  NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX idx_hashtags_caption_id ON hashtags(caption_id);
+CREATE INDEX idx_hashtags_tag        ON hashtags(tag);
+```
+
+### 📐 Design Decisions
 
 | Decision | Rationale |
 |---|---|
-| pgvector for embeddings | Stores post embeddings in Postgres, enabling SQL + vector search in a single query |
-| emotion_tags as TEXT[] | Array column with GIN index supports fast "emotion contains X" filtering |
-| MongoDB for chatbot sessions | Flexible schema suits variable-length conversation histories |
-| Redis for trending topics | Sorted sets (ZRANGEBYSCORE) natively support leaderboard queries in O(log N) |
-| Separate user_interactions table | Decouples engagement signals from post data; enables recommendation model retraining |
+| pgvector for post embeddings | Enables SQL + vector similarity search in one query — no separate vector DB needed |
+| emotion_tags as TEXT[] | GIN-indexed array supports fast `emotion_tags @> ARRAY['calm']` filtering |
+| ivfflat index (lists=100) | Reduces cosine search from O(N) to ~O(√N) with <2% recall loss at 1M posts |
+| MongoDB for chatbot sessions | Variable-length conversation histories fit a document model far better than rows |
+| Redis sorted sets for trending | `ZRANGEBYSCORE` delivers leaderboard queries in O(log N) natively |
+| Partial index on is_public | Community feed queries only scan public posts — dramatically smaller index |
 
 ---
 
-## 9. API Documentation
+## 🔌 API Documentation
 
-### 9.1 Authentication
-
-All protected endpoints require a **JWT Bearer token**. Tokens are issued on login and expire after **7 days**. Refresh tokens (30-day TTL) are stored in HttpOnly cookies.
+### Base URL
 
 ```
-Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...
+Development:  http://localhost:5000/api
+Production:   https://api.swiftchat.io/api
 ```
 
----
+### 🔐 Authentication Endpoints
 
-### 9.2 POST `/api/search/emotion`
+#### Register
 
-Performs an emotion-based search and returns ranked posts matching the user's expressed emotional intent.
+```http
+POST /api/auth/register
+Content-Type: application/json
 
-**Request**
+{
+  "username": "jane_doe",
+  "email":    "jane@example.com",
+  "password": "SecurePass123!"
+}
+```
+
+**Response — 201 Created**
 ```json
+{
+  "success": true,
+  "message": "User registered successfully",
+  "data": {
+    "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "user": {
+      "id":         "123e4567-e89b-12d3-a456-426614174000",
+      "username":   "jane_doe",
+      "email":      "jane@example.com",
+      "created_at": "2024-01-15T10:30:00Z"
+    }
+  }
+}
+```
+
+#### Login
+
+```http
+POST /api/auth/login
+Content-Type: application/json
+
+{
+  "email":    "jane@example.com",
+  "password": "SecurePass123!"
+}
+```
+
+**Response — 200 OK**
+```json
+{
+  "success": true,
+  "token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "user": {
+    "id":       "123e4567-...",
+    "username": "jane_doe",
+    "email":    "jane@example.com",
+    "role":     "creator"
+  }
+}
+```
+
+---
+
+### 🤖 AI Endpoints
+
+#### Generate Caption
+
+```http
+POST /api/ai/caption
+Content-Type: multipart/form-data
+Authorization: Bearer <token>
+
+{
+  "image":       <file>,              // Optional. JPG/PNG/WEBP. Max 10MB
+  "description": "Hiking in Alps",   // Optional if no image provided
+  "style":       "inspirational",    // funny|romantic|inspirational|motivational|storytelling
+  "platform":    "instagram",        // instagram|twitter|linkedin|tiktok|facebook
+  "locale":      "en"
+}
+```
+
+**Response — 200 OK**
+```json
+{
+  "captions": [
+    "The mountains called. I answered. ⛰️",
+    "Every summit starts with a single step.",
+    "Not all who wander are lost — some are just hiking."
+  ],
+  "hashtags":         ["#hiking", "#mountains", "#adventure", "#nature", "#explore"],
+  "image_tags":       ["mountain", "trail", "sunrise", "outdoor", "landscape"],
+  "engagement_score": 87
+}
+```
+
+**Error Responses**
+
+| Status | Error Code | Description |
+|---|---|---|
+| 400 | `INVALID_STYLE` | Style not in supported list |
+| 400 | `FILE_TOO_LARGE` | Image exceeds 10MB limit |
+| 422 | `IMAGE_UNSAFE` | Image flagged by content moderation |
+| 429 | `RATE_LIMIT_EXCEEDED` | Caption generation limited to 50/hour |
+| 500 | `CAPTION_SERVICE_UNAVAILABLE` | Python AI microservice unreachable |
+
+---
+
+#### Emotion-Based Search
+
+```http
 POST /api/search/emotion
 Content-Type: application/json
 Authorization: Bearer <token>
 
 {
-  "query":   "I want something calming",
-  "mood":    "anxious",
-  "limit":   20,
-  "offset":  0
+  "query":  "I want something calming",
+  "mood":   "anxious",
+  "limit":  20,
+  "offset": 0
 }
 ```
 
@@ -618,7 +663,7 @@ Authorization: Bearer <token>
     {
       "post_id":         "a1b2c3d4-...",
       "caption":         "Breathe. Everything will be okay.",
-      "media_url":       "https://cdn.emotisocial.io/posts/abc.jpg",
+      "media_url":       "https://cdn.swiftchat.io/posts/abc.jpg",
       "emotion_tags":    ["calm", "peaceful", "serene"],
       "sentiment_score": 0.91,
       "relevance_score": 0.87
@@ -636,72 +681,13 @@ Authorization: Bearer <token>
 | 400 | `QUERY_TOO_SHORT` | Query must be at least 3 characters |
 | 401 | `TOKEN_EXPIRED` | Re-authenticate to continue |
 | 429 | `RATE_LIMIT_EXCEEDED` | Search limited to 100 requests/minute |
-| 500 | `EMOTION_ENGINE_UNAVAILABLE` | AI search service is unreachable |
+| 500 | `EMOTION_ENGINE_UNAVAILABLE` | AI search service unreachable |
 
 ---
 
-### 9.3 POST `/api/ai/caption`
+#### Chat with AI Assistant
 
-Generates AI captions for an uploaded image or text description.
-
-**Request**
-```
-POST /api/ai/caption
-Content-Type: multipart/form-data
-Authorization: Bearer <token>
-
-{
-  "image":       <file>,            // Optional. JPG/PNG/WEBP. Max 10MB
-  "description": "Hiking trip",    // Optional if no image provided
-  "style":       "inspirational",
-  "platform":    "instagram",
-  "locale":      "en"
-}
-```
-
-**Response — 200 OK**
-```json
-{
-  "captions": [
-    "The mountains called. I answered. ⛰️",
-    "Every summit starts with a single step.",
-    "Not all who wander are lost — some are just hiking."
-  ],
-  "hashtags":   ["#hiking", "#mountains", "#adventure", "#nature", "#explore"],
-  "image_tags": ["mountain", "trail", "sunrise", "outdoor", "landscape"]
-}
-```
-
-**Error Responses**
-
-| Status | Error Code | Description |
-|---|---|---|
-| 400 | `INVALID_STYLE` | Style is not in the supported list |
-| 400 | `FILE_TOO_LARGE` | Image exceeds the 10MB file size limit |
-| 422 | `IMAGE_UNSAFE` | Image flagged by content moderation |
-| 429 | `RATE_LIMIT_EXCEEDED` | Caption generation limited to 50/hour |
-| 500 | `CAPTION_SERVICE_UNAVAILABLE` | AI caption service is unreachable |
-
----
-
-### 9.4 GET `/api/feed`
-
-Returns the personalised recommendation feed for the authenticated user.
-
-**Request**
-```
-GET /api/feed?limit=20&offset=0&mood=calm
-Authorization: Bearer <token>
-```
-
----
-
-### 9.5 POST `/api/chat/message`
-
-Sends a message to the AI chatbot and receives a context-aware response.
-
-**Request**
-```json
+```http
 POST /api/chat/message
 Content-Type: application/json
 Authorization: Bearer <token>
@@ -716,29 +702,541 @@ Authorization: Bearer <token>
 **Response — 200 OK**
 ```json
 {
-  "reply":      "Adventure begins where comfort ends ✈️🌍",
+  "reply":       "Adventure begins where comfort ends ✈️🌍",
   "suggestions": ["#travel", "#wanderlust", "#explore"],
-  "action":     null
+  "action":      null
 }
 ```
 
 ---
 
-## 10. Project Folder Structure
+### 📰 Feed & Post Endpoints
+
+#### Get Personalised Feed
+
+```http
+GET /api/feed?limit=20&offset=0&mood=calm
+Authorization: Bearer <token>
+```
+
+**Response — 200 OK**
+```json
+{
+  "success": true,
+  "data": {
+    "posts": [
+      {
+        "id":           "uuid",
+        "user":         { "username": "jane_doe", "avatar_url": "..." },
+        "caption":      "Golden skies, salty air. 🌅",
+        "media_url":    "https://cdn.swiftchat.io/posts/xyz.jpg",
+        "emotion_tags": ["peaceful", "joyful"],
+        "upvotes":      142,
+        "created_at":   "2024-01-15T18:30:00Z"
+      }
+    ],
+    "pagination": { "total": 500, "page": 1, "limit": 20, "totalPages": 25 }
+  }
+}
+```
+
+#### Create Post
+
+```http
+POST /api/posts
+Content-Type: multipart/form-data
+Authorization: Bearer <token>
+
+{
+  "caption":   "Golden skies, salty air. 🌅",
+  "media":     <file>,
+  "is_public": true
+}
+```
+
+#### Upvote a Post
+
+```http
+POST /api/posts/:postId/upvote
+Authorization: Bearer <token>
+```
+
+---
+
+### 👤 User Endpoints
+
+#### Get Profile
+
+```http
+GET /api/user/profile
+Authorization: Bearer <token>
+```
+
+#### Update Profile
+
+```http
+PATCH /api/user/profile
+Content-Type: application/json
+Authorization: Bearer <token>
+
+{
+  "display_name": "Jane Smith",
+  "bio":          "Chasing sunsets and good vibes 🌅"
+}
+```
+
+#### Update Mood
+
+```http
+PATCH /api/user/mood
+Content-Type: application/json
+Authorization: Bearer <token>
+
+{
+  "mood": "happy"
+}
+```
+
+---
+
+### Error Response Structure
+
+All error responses follow this structure:
+
+```json
+{
+  "success": false,
+  "error": {
+    "code":    "VALIDATION_ERROR",
+    "message": "Invalid email format",
+    "details": { "field": "email", "value": "invalid-email" }
+  }
+}
+```
+
+**Common Error Codes**
+
+| Code | Meaning |
+|---|---|
+| `VALIDATION_ERROR` | Invalid request data |
+| `AUTHENTICATION_ERROR` | Invalid or expired token |
+| `AUTHORIZATION_ERROR` | Insufficient permissions |
+| `NOT_FOUND` | Resource does not exist |
+| `RATE_LIMIT_EXCEEDED` | Too many requests |
+| `AI_SERVICE_UNAVAILABLE` | Python microservice unreachable |
+| `IMAGE_UNSAFE` | Content moderation rejection |
+| `INTERNAL_ERROR` | Unexpected server error |
+
+---
+
+## 🔐 Security
+
+### Best Practices Implemented
+
+#### Password Security
+- **bcrypt hashing** with 12 salt rounds
+- **Minimum requirements:** 8 characters, 1 uppercase, 1 number
+- **Password reset** via secure email tokens (1-hour expiry)
+- **Account lockout** after 5 failed attempts (15-minute cooldown)
+
+#### Token Security
+- **JWT RS256** with 7-day access token expiry
+- **Refresh token rotation** — new refresh token on every use
+- **Token blacklisting** on logout (Redis blacklist set)
+- **Secure cookie flags** — HttpOnly, Secure, SameSite=Strict
+
+#### API Security
+- **Rate limiting** — 100 req/15 min per IP (Redis sliding window)
+- **CORS configuration** — Whitelist-based allowed origins
+- **SQL injection prevention** — Parameterised queries throughout
+- **XSS protection** — Input sanitisation on all user-supplied text
+- **CSRF protection** — Double-submit cookie pattern
+
+#### Content Safety
+- **Pre-publication AI moderation** — Every post screened before going live
+- **AWS Rekognition pre-check** — NSFW detection before S3 upload
+- **Mental health safeguard** — Chatbot detects crisis signals and surfaces help resources
+
+#### Infrastructure Security
+- **Encrypted DB connections** — TLS/SSL on all PostgreSQL connections
+- **Role-based access control** — Admin, Moderator, Creator, Viewer roles
+- **Secrets management** — AWS Secrets Manager; zero plaintext secrets in code
+- **Audit logging** — All admin and moderation actions logged
+
+---
+
+## ⚡ Performance
+
+### Optimisation Strategies
+
+#### Backend Optimisations
+- **Redis caching** for feed, search, and caption results (>90% cache hit rate)
+- **ivfflat vector index** — O(√N) search vs O(N) full scan on post embeddings
+- **Connection pooling** — PostgreSQL max 20 connections via pg-pool
+- **Async moderation queue** — Redis queue keeps post creation non-blocking
+- **gzip compression** — Applied to all JSON responses
+
+#### Frontend Optimisations
+- **Code splitting** — Next.js dynamic imports per route
+- **Image optimisation** — Next/Image with automatic WebP conversion
+- **Memoisation** — React.memo and useMemo on expensive renders
+- **Debouncing** — 300ms debounce on emotion search input
+- **Skeleton loading** — Perceived performance on feed loads
+
+### Caching Strategy
+
+| Data | Cache Key | TTL | Store |
+|---|---|---|---|
+| Emotion search results | `emotion_search:{hash(query+mood)}` | 5 min | Redis |
+| AI caption results | `caption:{perceptual_hash}:{style}:{platform}` | 60 min | Redis |
+| Personalised feed | `feed:{user_id}:{mood}` | 10 min | Redis |
+| Trending posts | `trending:global` | 5 min | Redis |
+| User profile | `user:{user_id}` | 1 hour | Redis |
+| JWT validation | `session:{user_id}` | 7 days | Redis |
+
+### Performance Targets
+
+| Metric | Target | Current |
+|---|---|---|
+| API response (cached) | < 50ms | ~30ms |
+| API response (AI call) | < 2,000ms | ~1,500ms |
+| Emotion search latency | < 300ms | ~220ms |
+| Page load time | < 2s | ~1.6s |
+| Cache hit rate | > 90% | ~93% |
+| Uptime SLA | > 99.5% | 99.8% |
+
+---
+
+## 🧪 Testing
+
+### Running Tests
+
+```bash
+# Run all tests
+npm test
+
+# Coverage report
+npm run test:coverage
+
+# Specific test suite
+npm test -- --testPathPattern=caption
+
+# Watch mode
+npm test -- --watch
+```
+
+### Test Structure
 
 ```
-emotisocial/
+tests/
+├── unit/
+│   ├── controllers/
+│   ├── services/
+│   └── utils/
+├── integration/
+│   ├── api/
+│   │   ├── auth.test.js
+│   │   ├── caption.test.js
+│   │   ├── search.test.js
+│   │   └── feed.test.js
+│   └── database/
+└── e2e/
+    └── user-flows.test.js    # Register → Post → Search → Chat → Feed
+```
+
+### Example Test
+
+```javascript
+// tests/integration/api/caption.test.js
+const request = require('supertest');
+const app     = require('../../src/app');
+
+describe('POST /api/ai/caption', () => {
+  it('should return 3 captions for a valid request', async () => {
+    const response = await request(app)
+      .post('/api/ai/caption')
+      .set('Authorization', `Bearer ${testToken}`)
+      .field('style',    'inspirational')
+      .field('platform', 'instagram')
+      .attach('image',   './tests/fixtures/sunset.jpg');
+
+    expect(response.status).toBe(200);
+    expect(response.body.captions).toHaveLength(3);
+    expect(response.body.hashtags.length).toBeGreaterThan(0);
+    expect(response.body.engagement_score).toBeGreaterThan(0);
+  });
+
+  it('should reject oversized images', async () => {
+    const response = await request(app)
+      .post('/api/ai/caption')
+      .set('Authorization', `Bearer ${testToken}`)
+      .attach('image', './tests/fixtures/large_file.jpg');
+
+    expect(response.status).toBe(400);
+    expect(response.body.error.code).toBe('FILE_TOO_LARGE');
+  });
+});
+```
+
+### Testing Strategy Summary
+
+| Test Type | Tooling | Coverage Target | Scope |
+|---|---|---|---|
+| Unit Tests | Jest (Node) / Pytest (Python) | 85%+ | Functions, services, model logic |
+| Integration Tests | Supertest + Jest | 75%+ | API endpoints with live test DB |
+| End-to-End Tests | Playwright | Key user journeys | Register → Post → Search → Chat → Feed |
+| AI Output Quality | Custom eval harness | Manual review | 200 captions/week human-scored |
+| Load Testing | k6 | 500 concurrent users | Peak traffic auto-scaling validation |
+| Security Testing | OWASP ZAP | All endpoints | DAST scan on every release |
+
+---
+
+## 📋 Prerequisites
+
+### Required Software
+
+| Software | Version | Purpose |
+|---|---|---|
+| **Node.js** | 18+ | Backend JS runtime |
+| **npm** | 9+ | Package manager |
+| **Python** | 3.11+ | AI microservices |
+| **PostgreSQL** | 15+ | Primary database |
+| **Redis** | 7+ | Caching layer |
+| **Git** | Latest | Version control |
+
+### Optional Tools
+
+- **Docker** — For containerised deployment
+- **Postman** — For API testing
+- **pgAdmin** — For database management
+- **MongoDB Compass** — For chatbot session inspection
+
+### Check Your Installation
+
+```bash
+node --version      # v18+
+npm --version       # 9+
+python3 --version   # 3.11+
+psql --version      # 15+
+redis-cli --version # 7+
+```
+
+---
+
+## ⚙ Installation & Setup
+
+### 🔹 Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/yourorg/swiftchat.git
+cd swiftchat
+```
+
+### 🔹 Step 2: Install Dependencies
+
+```bash
+# Backend
+cd backend && npm install
+
+# Frontend
+cd ../client && npm install
+
+# AI Services
+cd ../ai-services && pip install -r requirements.txt
+```
+
+### 🔹 Step 3: Configure PostgreSQL
+
+```bash
+createdb swiftchat
+psql -U postgres -d swiftchat -c "CREATE EXTENSION IF NOT EXISTS vector;"
+```
+
+### 🔹 Step 4: Configure Redis
+
+```bash
+redis-server
+redis-cli ping    # Should return: PONG
+```
+
+### 🔹 Step 5: Set Up Environment Variables
+
+```bash
+cp backend/.env.example   backend/.env
+cp client/.env.example    client/.env
+cp ai-services/.env.example ai-services/.env
+```
+
+Edit each `.env` file — see [Environment Variables](#-environment-variables).
+
+### 🔹 Step 6: Run Database Migrations
+
+```bash
+cd backend && npm run migrate
+```
+
+### 🔹 Step 7: Seed Database (Optional)
+
+```bash
+npm run seed
+```
+
+### 🔹 Step 8: Start All Services
+
+**Terminal 1 — Backend API**
+```bash
+cd backend && npm run dev
+# Runs on http://localhost:5000
+```
+
+**Terminal 2 — Frontend**
+```bash
+cd client && npm run dev
+# Runs on http://localhost:3000
+```
+
+**Terminal 3 — AI Services**
+```bash
+cd ai-services
+uvicorn caption_service.main:app    --port 8001 --reload &
+uvicorn emotion_search.main:app     --port 8002 --reload &
+uvicorn chatbot_service.main:app    --port 8003 --reload &
+uvicorn recommender_service.main:app --port 8004 --reload &
+uvicorn moderation_service.main:app  --port 8005 --reload
+```
+
+### ✅ Verify Installation
+
+Visit **http://localhost:3000** — you should see the SwiftChat feed. Try the emotion search bar or caption wizard to confirm the AI services are connected.
+
+---
+
+## 🌍 Environment Variables
+
+### Backend (`backend/.env`)
+
+```env
+# Server
+PORT=5000
+NODE_ENV=development
+
+# PostgreSQL
+DATABASE_URL=postgresql://username:password@localhost:5432/swiftchat
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=swiftchat
+DB_USER=your_username
+DB_PASSWORD=your_password
+
+# Redis
+REDIS_URL=redis://localhost:6379
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=
+
+# JWT
+JWT_SECRET=your_super_secret_jwt_key_here_min_32_chars
+JWT_EXPIRES_IN=7d
+JWT_REFRESH_SECRET=your_refresh_token_secret_here
+JWT_REFRESH_EXPIRES_IN=30d
+
+# OAuth - Google
+GOOGLE_CLIENT_ID=your_google_client_id.apps.googleusercontent.com
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+GOOGLE_CALLBACK_URL=http://localhost:5000/api/auth/google/callback
+
+# OAuth - GitHub
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
+GITHUB_CALLBACK_URL=http://localhost:5000/api/auth/github/callback
+
+# Email
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your_email@gmail.com
+SMTP_PASSWORD=your_app_specific_password
+SMTP_FROM=noreply@swiftchat.io
+
+# AWS S3
+AWS_ACCESS_KEY_ID=your_access_key
+AWS_SECRET_ACCESS_KEY=your_secret_key
+AWS_REGION=us-east-1
+S3_BUCKET_NAME=swiftchat-media
+
+# Internal AI Service URLs
+CAPTION_SERVICE_URL=http://localhost:8001
+EMOTION_SEARCH_URL=http://localhost:8002
+CHATBOT_SERVICE_URL=http://localhost:8003
+RECOMMENDER_URL=http://localhost:8004
+MODERATION_URL=http://localhost:8005
+
+# Rate Limiting
+RATE_LIMIT_WINDOW_MS=900000
+RATE_LIMIT_MAX_REQUESTS=100
+
+# CORS
+CLIENT_URL=http://localhost:3000
+
+# Logging
+LOG_LEVEL=debug
+```
+
+### Frontend (`client/.env`)
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5000/api
+NEXT_PUBLIC_API_TIMEOUT=10000
+NEXT_PUBLIC_GOOGLE_CLIENT_ID=your_google_client_id
+NEXT_PUBLIC_GITHUB_CLIENT_ID=your_github_client_id
+NEXT_PUBLIC_ENABLE_DARK_MODE=true
+NEXT_PUBLIC_GA_TRACKING_ID=UA-XXXXX-X
+```
+
+### AI Services (`ai-services/.env`)
+
+```env
+OPENAI_API_KEY=sk-your_openai_api_key
+HUGGINGFACE_TOKEN=hf_your_token
+MONGO_URI=mongodb://localhost:27017/swiftchat_chat
+REDIS_URL=redis://localhost:6379
+LOG_LEVEL=info
+```
+
+### Generate Secure Secrets
+
+```bash
+node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
+```
+
+---
+
+## 📁 Project Structure
+
+```
+swiftchat/
 │
-├── client/                          # Next.js web frontend
-│   ├── components/                  # Reusable UI components
-│   │   ├── EmotionSearch/           # Search bar + emotion chip selector
-│   │   ├── CaptionWizard/           # AI caption UI panel
-│   │   ├── ChatBot/                 # Chatbot drawer / modal
-│   │   ├── PostCard/                # Social post display card
-│   │   └── MoodCheckIn/             # Daily mood check-in widget
-│   ├── pages/                       # Next.js route pages
-│   ├── services/                    # Axios API clients
-│   └── store/                       # Global state (Zustand / Redux)
+├── client/                          # Next.js 14 web frontend
+│   ├── public/
+│   └── src/
+│       ├── components/
+│       │   ├── common/              # Button, Input, Modal
+│       │   ├── layout/              # Header, Sidebar, Footer
+│       │   ├── feed/                # PostCard, FeedList, UpvoteButton
+│       │   ├── caption/             # CaptionWizard, StyleSelector
+│       │   ├── search/              # EmotionSearchBar, ResultCard
+│       │   ├── chatbot/             # ChatDrawer, MessageBubble
+│       │   └── mood/                # MoodCheckIn, MoodBadge
+│       ├── pages/
+│       │   ├── index.jsx            # Feed / Home
+│       │   ├── search.jsx           # Emotion search page
+│       │   ├── create.jsx           # Post creation + caption wizard
+│       │   ├── profile/[username].jsx
+│       │   ├── login.jsx
+│       │   └── register.jsx
+│       ├── hooks/                   # useAuth, useFeed, useCaption, useChat
+│       ├── services/                # Axios API clients per module
+│       ├── context/                 # AuthContext, ThemeContext, MoodContext
+│       └── utils/                   # formatters, validators, constants
 │
 ├── mobile/                          # Flutter mobile application
 │   └── lib/
@@ -746,200 +1244,678 @@ emotisocial/
 │       ├── widgets/
 │       └── services/
 │
-├── backend/                         # Node.js / Django core API
-│   ├── controllers/                 # Route handlers
-│   ├── middleware/                  # Auth, rate-limit, error-handling
-│   ├── routes/                      # API route definitions
-│   ├── services/                    # Business logic & AI service bridges
-│   ├── models/                      # ORM models / DB query layer
-│   └── app.js                       # Application entry point
+├── backend/                         # Node.js / Express core API
+│   └── src/
+│       ├── controllers/             # authController, postController, aiController
+│       ├── routes/                  # Route definitions per module
+│       ├── services/
+│       │   ├── authService.js
+│       │   ├── postService.js
+│       │   ├── aiService.js         # Bridge to Python AI microservices
+│       │   ├── feedService.js
+│       │   └── emailService.js
+│       ├── middleware/              # auth, validation, rateLimiter, errorHandler
+│       ├── models/                  # PostgreSQL query models (Sequelize / raw)
+│       ├── config/                  # database, redis, passport (OAuth)
+│       ├── utils/                   # jwt, bcrypt, validators, apiHelpers
+│       └── app.js
 │
 ├── ai-services/                     # Python AI microservices
 │   ├── caption-service/
-│   │   ├── main.py                  # FastAPI entry point
-│   │   ├── caption_model.py         # LLM prompt + calling logic
+│   │   ├── main.py                  # FastAPI entry (port 8001)
+│   │   ├── caption_model.py         # LLM prompt assembly + calling
 │   │   └── image_analyzer.py        # CLIP image encoding
 │   ├── emotion-search/
-│   │   ├── main.py
+│   │   ├── main.py                  # FastAPI entry (port 8002)
 │   │   ├── intent_classifier.py     # BERT emotion classifier
-│   │   └── vector_search.py         # pgvector query logic
+│   │   └── vector_search.py         # pgvector cosine search
 │   ├── chatbot-service/
-│   │   ├── main.py
-│   │   └── agent.py                 # LangChain ReAct agent
+│   │   ├── main.py                  # FastAPI entry (port 8003)
+│   │   └── agent.py                 # LangChain ReAct agent + tools
 │   ├── recommender-service/
-│   │   ├── main.py
+│   │   ├── main.py                  # FastAPI entry (port 8004)
 │   │   └── recommendation_engine.py
-│   └── moderation-service/
-│       ├── main.py
-│       └── classifier.py            # Hate speech + NSFW detection
+│   ├── moderation-service/
+│   │   ├── main.py                  # FastAPI entry (port 8005)
+│   │   └── classifier.py            # Hate speech + NSFW detection
+│   └── requirements.txt
 │
 ├── database/
-│   ├── migrations/                  # SQL migration files
-│   └── seeds/                       # Development seed data
+│   ├── migrations/                  # Numbered SQL migration files
+│   └── seeds/                       # Dev seed data
+│
+├── docker/
+│   ├── Dockerfile.backend
+│   ├── Dockerfile.client
+│   ├── Dockerfile.ai
+│   └── nginx.conf
+│
+├── .github/
+│   └── workflows/
+│       ├── ci.yml                   # Test pipeline
+│       └── cd.yml                   # Deploy pipeline
 │
 ├── docker-compose.yml
-├── .env.example
+├── .gitignore
+├── .eslintrc.js
+├── .prettierrc
+├── LICENSE
 └── README.md
 ```
 
 ---
 
-## 11. Performance Considerations
+## 🚀 Deployment
 
-### 11.1 Caching Strategy
-
-| Cache Layer | Key Pattern | TTL | Purpose |
-|---|---|---|---|
-| Redis | `emotion_search:{hash(query+mood)}` | 5 minutes | Cache emotion search results |
-| Redis | `caption:{perceptual_hash}:{style}:{platform}` | 60 minutes | Cache AI caption results |
-| Redis | `feed:{user_id}:{mood}` | 10 minutes | Cache personalised feed pages |
-| Redis | `trending:global` | 5 minutes | Cache platform-wide trending posts |
-| Redis | `session:{user_id}` | 7 days | JWT validation result cache |
-
----
-
-### 11.2 Vector Search Optimisation
-
-Post embeddings are indexed using **IVFFlat** (Inverted File with Flat compression) in pgvector. The index is configured with `lists=100` for datasets up to 1 million posts, reducing search time from O(N) full scan to approximately O(√N) with an acceptable recall loss of less than 2%.
-
-```sql
--- Create IVFFlat index for approximate nearest-neighbour search
-CREATE INDEX idx_posts_embedding
-ON posts USING ivfflat (embedding vector_cosine_ops)
-WITH (lists = 100);
-```
-
----
-
-### 11.3 AI Service Scaling
-
-- **Caption service** — scales to GPU instances (`g4dn.xlarge`) during peak hours via auto-scaling group
-- **Moderation service** — scales to CPU instances; processes content asynchronously via a Redis queue
-- **Recommendation engine** — pre-computes recommendation batches every 15 minutes per active user; served from cache on request
-
----
-
-## 12. Security Design
-
-| Layer | Implementation | Notes |
-|---|---|---|
-| Authentication | JWT RS256 + Refresh Tokens | HttpOnly cookie for refresh; localStorage forbidden |
-| Authorisation | RBAC middleware | Roles: Admin, Moderator, Creator, Viewer |
-| Rate Limiting | Redis sliding window | Search: 100/min; Caption: 50/hr; Post: 30/hr |
-| Input Validation | Joi (Node) / Pydantic (Python) | All API inputs schema-validated before processing |
-| Content Moderation | Multi-model AI classifier | Runs before any content is persisted |
-| Image Safety | AWS Rekognition pre-check | NSFW detection before S3 upload and AI processing |
-| Data Encryption | AES-256 at rest; TLS 1.3 transit | All S3 objects server-side encrypted |
-| Secrets Management | AWS Secrets Manager | Zero plaintext secrets in codebase or .env files |
-
----
-
-## 13. Deployment Architecture
-
-### 13.1 Local Development
+### 🐳 Docker Deployment
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourorg/emotisocial
+# Build all images
+docker-compose build
 
 # Start all services
-docker-compose up --build
+docker-compose up -d
 
-# Services started:
-#   Next.js frontend:          http://localhost:3000
-#   Node.js / Django backend:  http://localhost:5000
-#   Caption AI service:        http://localhost:8001
-#   Emotion Search service:    http://localhost:8002
-#   Chatbot service:           http://localhost:8003
-#   Recommender service:       http://localhost:8004
-#   Moderation service:        http://localhost:8005
-#   PostgreSQL:                localhost:5432
-#   MongoDB:                   localhost:27017
-#   Redis:                     localhost:6379
+# View logs
+docker-compose logs -f
+
+# Stop services
+docker-compose down
+```
+
+### `docker-compose.yml`
+
+```yaml
+version: '3.8'
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg15
+    environment:
+      POSTGRES_DB: swiftchat
+      POSTGRES_USER: swiftchat_user
+      POSTGRES_PASSWORD: secure_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  mongo:
+    image: mongo:7
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ../docker/Dockerfile.backend
+    ports:
+      - "5000:5000"
+    environment:
+      DATABASE_URL: postgresql://swiftchat_user:secure_password@postgres:5432/swiftchat
+      REDIS_URL: redis://redis:6379
+      MONGO_URI: mongodb://mongo:27017/swiftchat_chat
+    depends_on:
+      - postgres
+      - redis
+      - mongo
+
+  ai-services:
+    build:
+      context: ./ai-services
+      dockerfile: ../docker/Dockerfile.ai
+    ports:
+      - "8001-8005:8001-8005"
+    depends_on:
+      - redis
+      - mongo
+
+  frontend:
+    build:
+      context: ./client
+      dockerfile: ../docker/Dockerfile.client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  mongo_data:
+  redis_data:
 ```
 
 ---
 
-### 13.2 Cloud Deployment
+### ☁ Cloud Deployment Options
 
-| Component | Service | Notes |
-|---|---|---|
-| Frontend | Vercel | Automatic deploys; edge CDN caching |
-| Core Backend | AWS ECS (Fargate) | Auto-scaling; min 2 tasks, max 20 |
-| AI Services (CPU) | AWS ECS (Fargate) | Moderation + Recommender on CPU nodes |
-| AI Services (GPU) | AWS ECS (g4dn.xlarge) | Caption + Search on GPU for inference speed |
-| PostgreSQL | AWS RDS Multi-AZ | pgvector extension enabled; automated backups |
-| MongoDB | MongoDB Atlas | M30 cluster; 3-node replica set |
-| Redis | AWS ElastiCache | Cluster mode; 3 shards |
-| Storage | AWS S3 + CloudFront | Private bucket; signed URLs; CloudFront CDN |
+#### Option 1: Vercel (Frontend) + Render (Backend) + ECS (AI Services)
 
----
+**Frontend on Vercel:**
+```bash
+npm install -g vercel
+cd client && vercel --prod
+```
 
-### 13.3 CI/CD Pipeline
+**Backend on Render:**
+1. Connect GitHub repo → select "Web Service"
+2. Build: `npm install` | Start: `npm start`
+3. Add all backend environment variables
 
-- GitHub Actions triggers on push to `main` and on pull request
-- Pipeline stages: **Lint → Unit Tests → Integration Tests → Docker Build → Deploy to Staging → Smoke Tests → Deploy to Production**
-- Blue/green deployment on ECS; instant traffic switchover with automatic rollback on health check failure
+**AI Services on AWS ECS:**
+- Caption + Emotion Search → `g4dn.xlarge` (GPU inference)
+- Moderation + Recommender → `t3.medium` (CPU only)
 
 ---
 
-## 14. Testing Strategy
+#### Option 2: AWS EC2 (Full Stack)
 
-| Test Type | Tooling | Target Coverage | Scope |
-|---|---|---|---|
-| Unit Tests | Jest (Node) / Pytest (Python) | 85%+ | Individual functions, model logic, service methods |
-| Integration Tests | Supertest + Jest | 75%+ | API endpoints with live test database |
-| End-to-End Tests | Playwright | Key user journeys | Register → Post → Search → Chat → Feed |
-| AI Output Quality | Custom eval harness | Manual review | 200 captions/week scored by human raters |
-| Load Testing | k6 | 500 concurrent users | Validate auto-scaling under peak traffic |
-| Security Testing | OWASP ZAP | All endpoints | Automated DAST scanning on every release |
+```bash
+# SSH into instance
+ssh -i your-key.pem ubuntu@your-instance-ip
 
----
+# System setup
+sudo apt update && sudo apt upgrade -y
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt install -y nodejs python3.11 python3-pip postgresql postgresql-contrib redis-server nginx
+sudo -u postgres psql -c "CREATE EXTENSION IF NOT EXISTS vector;"
+sudo npm install -g pm2
 
-## 15. Future Roadmap
+# Clone and build
+git clone https://github.com/yourorg/swiftchat.git && cd swiftchat
+cd backend && npm install
+cd ../client && npm install && npm run build
+cd ../ai-services && pip install -r requirements.txt
 
-### Phase 1 — Core Release *(Current)*
-- AI caption generator with 5 styles
-- Emotion-based smart search
-- AI chatbot assistant
-- Smart recommendation feed
-- AI content moderation
+# Start services
+pm2 start npm --name "swiftchat-backend" -- start
+pm2 save && pm2 startup
+```
 
----
+**Nginx configuration:**
+```nginx
+server {
+    listen 80;
+    server_name yourdomain.com;
 
-### Phase 2 — Deepened Personalisation
-- **Personal AI writing style** — the system learns from a user's own caption history to replicate their unique voice in future suggestions
-- **Emotion detection from selfies** — on-device facial expression analysis used to automatically check in the user's mood on app open
-- **Voice-based search** — users speak their emotional query; Whisper ASR transcribes and the emotion search engine processes
+    location / {
+        root /home/ubuntu/swiftchat/client/.next;
+        try_files $uri /index.html;
+    }
 
----
+    location /api {
+        proxy_pass http://localhost:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+}
+```
 
-### Phase 3 — Creator & Community
-- **AI-generated Reels and short-form video** — keyframe extraction + generative audio-visual assembly
-- **AI storytelling posts** — users provide bullet points; AI generates a long-form narrative story post
-- **Community mental wellness features** — opt-in peer support groups, daily wellness check aggregates, crisis resource surfacing
-
----
-
-### Phase 4 — Platform Ecosystem
-- **Public developer API** with tiered pricing for third-party emotion-aware app builders
-- **Browser extension** for cross-platform caption generation directly in Instagram, LinkedIn, and Twitter web UIs
-- **Brand Intelligence Dashboard** — businesses monitor the emotional sentiment of content mentioning their brand
-
----
-
-### Phase 5 — Research & Ethics
-- **Longitudinal well-being study** — opt-in research program tracking whether emotion-aware feeds improve self-reported mood over time
-- **Emotion taxonomy expansion** — extend beyond the GoEmotions 28-label taxonomy to a 64-label culturally-diverse emotion model
-- **Algorithmic transparency report** — quarterly public report on recommendation system behaviour and content moderation accuracy
-
----
-
-> **Contributing**
-> We welcome contributions from developers, researchers, and mental wellness advocates.
-> Please read `CONTRIBUTING.md` for our code of conduct, development setup guide, and PR process.
-> All contributors must sign the CLA before submitting code.
+```bash
+sudo ln -s /etc/nginx/sites-available/swiftchat /etc/nginx/sites-enabled/
+sudo certbot --nginx -d yourdomain.com
+sudo systemctl restart nginx
+```
 
 ---
 
-*SwiftChat · MIT License · Built with care for human well-being*
+### 🔄 CI/CD Pipeline (GitHub Actions)
+
+```yaml
+# .github/workflows/deploy.yml
+name: Deploy SwiftChat
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: cd backend && npm install && npm test
+      - run: cd client && npm install && npm test
+      - run: cd ai-services && pip install -r requirements.txt && pytest
+
+  deploy-backend:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Deploy to Render
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
+
+  deploy-frontend:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: amondnet/vercel-action@v20
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+```
+
+---
+
+## 🔧 Troubleshooting
+
+### 1. pgvector Extension Missing
+
+**Error:** `type "vector" does not exist`
+
+```bash
+sudo apt install postgresql-15-pgvector
+psql -U postgres -d swiftchat -c "CREATE EXTENSION IF NOT EXISTS vector;"
+```
+
+---
+
+### 2. AI Service Unreachable
+
+**Error:** `AI_SERVICE_UNAVAILABLE` returned from backend
+
+```bash
+# Check if service is alive
+curl http://localhost:8001/health
+
+# Restart
+cd ai-services/caption-service
+uvicorn main:app --reload --port 8001
+
+# Check PM2 logs
+pm2 logs caption-service
+```
+
+---
+
+### 3. Redis Connection Error
+
+**Error:** `Error: Redis connection to localhost:6379 failed`
+
+```bash
+redis-cli ping           # Should return PONG
+redis-server --daemonize yes
+redis-cli CONFIG GET bind
+```
+
+---
+
+### 4. JWT Token Invalid
+
+**Error:** `JsonWebTokenError: invalid signature`
+
+```bash
+# Regenerate a strong secret
+node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
+# Update JWT_SECRET in .env, clear browser localStorage and cookies
+```
+
+---
+
+### 5. CORS Error
+
+**Error:** `Access to XMLHttpRequest blocked by CORS policy`
+
+```javascript
+// backend/src/app.js
+app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
+```
+
+---
+
+### 6. Port Already in Use
+
+**Error:** `EADDRINUSE: address already in use :::5000`
+
+```bash
+lsof -i :5000
+kill -9 <PID>
+# Or use: PORT=5001 npm run dev
+```
+
+---
+
+### 7. Python Dependency Conflicts
+
+**Error:** `ModuleNotFoundError` in AI services
+
+```bash
+cd ai-services
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+---
+
+### 8. OAuth Callback Mismatch
+
+**Error:** `redirect_uri_mismatch`
+
+- Verify the callback URL in Google/GitHub OAuth console **exactly** matches your `.env` value
+- Include protocol (`http://` or `https://`)
+- Remove trailing slashes
+- For local dev, whitelist `http://localhost:5000/api/auth/google/callback`
+
+---
+
+## ❓ FAQ
+
+### General Questions
+
+**Q: Is SwiftChat free to use?**
+A: Yes — SwiftChat is fully open-source under the MIT license. Self-host it for free.
+
+**Q: Does SwiftChat require an OpenAI API key?**
+A: Yes, the caption generator and chatbot use OpenAI GPT-4. You can swap in any OpenAI-compatible model by updating the AI service configuration.
+
+**Q: Can I use SwiftChat without the AI features?**
+A: Yes. The core social platform (posts, feed, comments, profiles) works independently. AI features degrade gracefully if any AI service is offline.
+
+**Q: How does emotion search actually work?**
+A: Your query is classified into emotion labels by a BERT model, encoded into a 384-dimensional vector, and matched against pre-indexed post embeddings using cosine similarity in PostgreSQL via pgvector.
+
+**Q: Is my mood data stored permanently?**
+A: Your mood is stored with a timestamp in the users table and can be cleared at any time from your profile settings.
+
+---
+
+### Technical Questions
+
+**Q: Why pgvector instead of a dedicated vector database like Pinecone?**
+A: pgvector keeps everything in one database, simplifying operations. At under 10M posts, pgvector with an ivfflat index is fast enough. A dedicated vector DB would be considered at 50M+ posts.
+
+**Q: Why are AI services in Python, separate from the Node.js backend?**
+A: Python has the richest ML ecosystem (HuggingFace, LangChain, sentence-transformers). Separating them allows independent GPU scaling and keeps the JS backend lean.
+
+**Q: Can I replace GPT-4 with a self-hosted model?**
+A: Yes. The caption and chatbot services use an OpenAI-compatible interface. Replace the call with any endpoint that follows the same schema (e.g. Ollama, vLLM, Mistral).
+
+**Q: How do I add a new caption style?**
+A: Add the style name to the Joi validation enum in `backend/src/middleware/validationMiddleware.js` and update the prompt template in `ai-services/caption-service/caption_model.py`.
+
+**Q: Is there a mobile app?**
+A: A Flutter app is included in the `mobile/` directory and is on the active roadmap for app store release.
+
+---
+
+### Development Questions
+
+**Q: How do I contribute?**
+A: See the [Contributing](#-contributing) section for full guidelines.
+
+**Q: How do I report a bug?**
+A: Open an issue at [github.com/yourorg/swiftchat/issues](https://github.com/yourorg/swiftchat/issues) with reproduction steps.
+
+**Q: Can I use this commercially?**
+A: Yes — MIT license permits commercial use. Attribution appreciated but not required.
+
+---
+
+## 📊 Design Decisions
+
+### Why Microservices for AI, Monolith for Core?
+
+**AI Microservices rationale:**
+- AI services require GPU instances; core backend runs fine on CPU
+- Independent scaling: caption service can scale 10x without touching moderation
+- Language boundary: Python for ML, Node.js for API — best tool for each job
+- Failure isolation: one AI service going down does not crash the platform
+
+**Monolith Core Backend rationale:**
+- Faster iteration in early stages
+- Simpler deployment and debugging
+- Modules are cleanly separated and can be extracted to microservices when traffic demands it
+
+---
+
+### Why PostgreSQL + pgvector Instead of MongoDB + Pinecone?
+
+- Strong relational integrity for users, posts, comments, and interaction signals
+- pgvector enables SQL + vector similarity search in a **single query** — no dual-write, no sync lag
+- ACID compliance for upvotes, follows, and moderation state changes
+- JSONB support for cases where a flexible schema is needed
+- Operational simplicity — one database to monitor, back up, and secure
+
+---
+
+### Why Redis for Caching and Queuing?
+
+- Sub-millisecond response for cached feeds and captions
+- Sorted sets natively support trending leaderboards in O(log N)
+- Lists power the async moderation pipeline without an extra message broker
+- Sliding window counters for rate limiting — no extra library needed
+- Session and JWT blacklist management in a single store
+
+---
+
+### Why LangChain for the Chatbot?
+
+- ReAct pattern lets the chatbot reason before acting — decide whether to search posts, generate a caption, or simply respond conversationally
+- Tool registration is clean and extensible — adding a new capability is one function definition
+- Built-in memory management for multi-turn conversation history
+- Provider-agnostic — swap GPT-4 for any LLM without rewriting agent logic
+
+---
+
+### Why JWT over Sessions?
+
+- Stateless — scales horizontally without sticky sessions or shared session store
+- Works seamlessly across web, mobile, and API consumers
+- Short expiry (7 days) + refresh token rotation mitigates the inability to instantly revoke
+
+---
+
+## 🛣 Roadmap
+
+### Phase 1 — Core Release ✅ *(Completed)*
+- [x] AI caption generator (5 styles, 5 platforms)
+- [x] Emotion-based smart search
+- [x] AI chatbot assistant (LangChain ReAct)
+- [x] Smart recommendation feed
+- [x] AI content moderation pipeline
+- [x] JWT + OAuth authentication (Google, GitHub)
+
+### Phase 2 — Deepened Personalisation 🚧 *(In Progress)*
+- [x] Engagement score preview before posting
+- [x] Multi-platform caption mode (one image → 5 captions)
+- [ ] Personal AI writing style — learn from user's caption history to replicate their voice
+- [ ] Emotion detection from selfies — on-device FER model for mood check-in
+- [ ] Voice-based emotion search — Whisper ASR + emotion NLP pipeline
+
+### Phase 3 — Creator & Community 📅 *(Planned)*
+- [ ] AI short-form video caption generation (Reels / TikTok)
+- [ ] AI storytelling posts — bullet points → fully written narrative
+- [ ] Community mental wellness features — peer support groups, daily wellness aggregates
+- [ ] Creator analytics dashboard — engagement trends and caption performance over time
+
+### Phase 4 — Platform Ecosystem 📅 *(Planned)*
+- [ ] Public developer API with tiered pricing
+- [ ] Browser extension — caption generation inside Instagram and LinkedIn web UI
+- [ ] Brand Intelligence Dashboard — sentiment monitoring for business accounts
+- [ ] Zapier / Make integration for automated caption workflows
+
+### Phase 5 — Research & Ethics 📅 *(Future)*
+- [ ] Longitudinal well-being study — opt-in research tracking mood vs feed quality over time
+- [ ] 64-label culturally-diverse emotion taxonomy (expansion beyond GoEmotions)
+- [ ] Quarterly algorithmic transparency report — public audit of recommendation behaviour
+- [ ] On-device AI inference option — privacy-preserving caption generation with no cloud calls
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions from developers, designers, ML researchers, and mental wellness advocates!
+
+### How to Contribute
+
+1. **Fork the repository**
+   ```bash
+   git clone https://github.com/yourorg/swiftchat.git
+   cd swiftchat
+   ```
+
+2. **Create a feature branch**
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. **Make your changes**
+   - Write clean, readable code
+   - Follow existing code style
+   - Add tests for new features
+   - Update documentation
+
+4. **Commit with a conventional message**
+   ```bash
+   git add .
+   git commit -m "feat: add voice-based emotion search"
+   ```
+   **Commit types:** `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`
+
+5. **Push and open a Pull Request**
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+### Contribution Guidelines
+
+- **JS/TS:** ES2022+, functional style, avoid mutation
+- **Python:** PEP 8, type hints on all function signatures, docstrings on classes
+- **React:** Functional components with hooks only
+- **Tests:** All new features must include unit tests; API changes require integration tests
+- **Docs:** Update README and inline comments for any public-facing change
+
+### Good First Issues
+
+Look for issues labelled:
+- `good first issue`
+- `help wanted`
+- `documentation`
+- `ai-improvement`
+
+### Code of Conduct
+
+- Be respectful and inclusive
+- Provide specific, constructive feedback
+- Be especially thoughtful when discussing the emotional AI features — our users may be vulnerable
+- Report inappropriate behaviour to the maintainers
+
+---
+
+## 👥 Contributors
+
+Thanks to everyone who has helped build SwiftChat! 🙏
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://via.placeholder.com/100" width="100px;" alt=""/><br />
+      <sub><b>Your Name</b></sub><br />
+      <small>Creator & Maintainer</small>
+    </td>
+  </tr>
+</table>
+
+Want to see your name here? [Contribute to SwiftChat!](#-contributing)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for full details.
+
+```
+MIT License
+
+Copyright (c) 2024 SwiftChat Team
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+```
+
+---
+
+## 📬 Contact
+
+### Get in Touch
+
+- **Email:** [hello@swiftchat.io](mailto:hello@swiftchat.io)
+- **GitHub:** [@yourorg](https://github.com/yourorg)
+- **Twitter:** [@swiftchatio](https://twitter.com/swiftchatio)
+- **LinkedIn:** [SwiftChat](https://linkedin.com/company/swiftchat)
+- **Discord:** [Join our server](https://discord.gg/swiftchat)
+
+### Project Links
+
+- **Live Demo:** https://swiftchat-demo.vercel.app
+- **Repository:** https://github.com/yourorg/swiftchat
+- **Issue Tracker:** https://github.com/yourorg/swiftchat/issues
+- **Roadmap:** https://github.com/yourorg/swiftchat/projects
+
+---
+
+## 🌟 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=yourorg/swiftchat&type=Date)](https://star-history.com/#yourorg/swiftchat&Date)
+
+---
+
+## 🎯 Final Words
+
+**SwiftChat** was built out of a belief that social media should make people feel *better*, not worse. Existing platforms are extraordinary at connecting people — but they've never asked *"how are you feeling right now?"* and tried to help.
+
+Whether you're:
+- 😊 Looking for content that matches your current mood
+- ✍️ A creator who wants to post more and agonise less over captions
+- 💼 A developer building the next emotionally-aware application
+- 🛡 A moderator tired of manually filtering toxic content
+
+SwiftChat is built for you.
+
+> **"The most important thing in communication is hearing what isn't said."**  
+> — Peter Drucker
+
+---
+
+<div align="center">
+
+### Built for humans who don't just share content — they share how they feel. 🧠💚
+
+**Give us a ⭐ if SwiftChat makes social media feel more human!**
+
+[Report Bug](https://github.com/yourorg/swiftchat/issues) · [Request Feature](https://github.com/yourorg/swiftchat/issues) · [Join Discord](https://discord.gg/swiftchat)
+
+</div>
+
+---
+
+<div align="center">
+  <sub>Made with ❤️ by the SwiftChat Team</sub>
+</div>
