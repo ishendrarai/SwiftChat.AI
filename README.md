@@ -1,4 +1,4 @@
-# EmotiSocial
+# SwiftChat
 ## AI-Powered Smart Social Media Platform
 
 > **Production-Grade Technical Documentation | v1.0.0**
@@ -36,7 +36,7 @@
 
 ### 1.1 Concept & Product Vision
 
-EmotiSocial is an AI-integrated social networking platform that redefines how people discover, share, and interact with content online. Unlike traditional platforms that rely solely on hashtags, follower graphs, or engagement-driven algorithms, EmotiSocial introduces a fourth dimension to content discovery: **human emotion**.
+SwiftChat is an AI-integrated social networking platform that redefines how people discover, share, and interact with content online. Unlike traditional platforms that rely solely on hashtags, follower graphs, or engagement-driven algorithms, SwiftChat introduces a fourth dimension to content discovery: **human emotion**.
 
 The platform embeds four distinct AI systems — a caption generator, a conversational chatbot assistant, an emotion-based search engine, and a personalised recommendation engine — directly into the core social experience. The result is a platform that does not just serve content, but understands *why* a user wants it and *how* it might make them feel.
 
@@ -46,7 +46,7 @@ The product vision is to build the **first truly emotionally intelligent social 
 
 ### 1.2 Target Users
 
-| User Segment | Primary Need | How EmotiSocial Helps |
+| User Segment | Primary Need | How SwiftChat Helps |
 |---|---|---|
 | Everyday Social Users | Relevant, mood-matched content | Emotion-based search & smart feed |
 | Content Creators | Engaging captions quickly | AI caption & hashtag generator |
@@ -60,7 +60,7 @@ The product vision is to build the **first truly emotionally intelligent social 
 
 Social media reaches over **5 billion people** globally. Yet despite this scale, the platforms most people use daily were not designed with emotional intelligence in mind. The core discovery mechanisms — hashtags, engagement loops, and popularity signals — optimise for *time-on-platform* rather than *user well-being*.
 
-EmotiSocial proposes an architectural shift: **emotion and context should be first-class inputs to content delivery.**
+SwiftChat proposes an architectural shift: **emotion and context should be first-class inputs to content delivery.**
 
 ---
 
@@ -84,7 +84,7 @@ Despite billions of dollars of AI investment in the industry, most social platfo
 
 ### 2.2 Pain Point Comparison
 
-| Pain Point | Current Platform Behaviour | EmotiSocial Solution |
+| Pain Point | Current Platform Behaviour | SwiftChat Solution |
 |---|---|---|
 | Content discovery | Keyword/hashtag only | Emotion + intent-aware NLP search |
 | Caption creation | Manual, time-consuming | One-click AI caption generation |
@@ -98,7 +98,7 @@ Despite billions of dollars of AI investment in the industry, most social platfo
 
 ### 3.1 System Overview
 
-EmotiSocial is an AI-integrated social networking platform built on a **microservices architecture**. The core backend orchestrates four independently deployable AI services, each responsible for a distinct intelligent behaviour. All AI services communicate with the main backend via an internal service mesh, keeping concerns cleanly separated and independently scalable.
+SwiftChat is an AI-integrated social networking platform built on a **microservices architecture**. The core backend orchestrates four independently deployable AI services, each responsible for a distinct intelligent behaviour. All AI services communicate with the main backend via an internal service mesh, keeping concerns cleanly separated and independently scalable.
 
 ---
 
@@ -204,7 +204,7 @@ The chatbot uses a **ReAct (Reasoning + Acting)** agent pattern with the followi
 ### 4.3 Emotion-Based Smart Search
 
 #### Overview
-This is EmotiSocial's most differentiated feature. Rather than requiring users to know the right hashtag or keyword, the emotion search engine accepts **free-text emotional expressions** and maps them to relevant content using a multi-model NLP pipeline.
+This is SwiftChat's most differentiated feature. Rather than requiring users to know the right hashtag or keyword, the emotion search engine accepts **free-text emotional expressions** and maps them to relevant content using a multi-model NLP pipeline.
 
 #### Internal Mechanism
 
@@ -942,4 +942,4 @@ docker-compose up --build
 
 ---
 
-*EmotiSocial · MIT License · Built with care for human well-being*
+*SwiftChat · MIT License · Built with care for human well-being*
